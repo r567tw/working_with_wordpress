@@ -1,4 +1,7 @@
 
+# $gateway->supports
+- tokenization: 允許使用者在「我的帳號」增加付款方式
+
 
 # WooCommerce 訂單創建流程
 1. 訂單建立（存進數據庫）：客戶完成結賬信息並提交訂單後，WooCommerce 先將訂單信息存儲進數據庫。
