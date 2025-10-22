@@ -1,0 +1,25 @@
+{
+  "name": "static-html-server",
+  "version": "1.0.0",
+  "description": "Serve Static HTML by http-server",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server -p 8000 -o",
+    "serve": "npx http-server -p 8000",
+    "download-assets": "node download-assets.js",
+    "open": "start index.html"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "javascript"
+  ],
+  "author": "Jimmy Fang",
+  "license": "UNLICENSED",
+  "private": true,
+  "devDependencies": {},
+  "dependencies": {},
+  "engines": {
+    "node": ">=12.0.0"
+  }
+}
