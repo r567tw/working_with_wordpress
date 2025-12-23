@@ -1,0 +1,25 @@
+services:
+  wordpress:
+    image: wordpress:latest
+    ports:
+      - "8080:80" # 將容器的 80 port 對應到本機的 8080
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: wordpress_user
+      WORDPRESS_DB_PASSWORD: wordpress_password
+      WORDPRESS_DB_NAME: wordpress_db
+    volumes:
+      - ./src:/var/www/html
+
+  db:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: wordpress_db
+      MYSQL_USER: wordpress_user
+      MYSQL_PASSWORD: wordpress_password
+    volumes:
+      - wordpress_data:/var/lib/mysql
+
+volumes:
+  wordpress_data:
